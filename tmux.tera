@@ -3,13 +3,13 @@ whiskers:
   version: "2.1.1"
   matrix:
     - flavor
-  filename: "themes/catppuccin_{{flavor.identifier}}_tmux.conf"
+  filename: "themes/kanagawa_{{flavor.identifier}}_tmux.conf"
 ---
 {%- set palette = flavor.colors -%}
 # vim:set ft=tmux:
 
 # --> Catppuccin ({{ flavor.identifier | capitalize }})
-set -ogq @thm_bg "#{{ palette.base.hex | lower }}"
+set -ogq @thm_bg_alt "#{{ palette.base.hex | lower }}"
 set -ogq @thm_fg "#{{ palette.text.hex | lower }}"
 
 # Colors
@@ -24,10 +24,10 @@ set -ogq @thm_peach "#{{ palette.peach.hex | lower }}"
 set -ogq @thm_yellow "#{{ palette.yellow.hex | lower }}"
 set -ogq @thm_green "#{{ palette.green.hex | lower }}"
 set -ogq @thm_teal "#{{ palette.teal.hex | lower }}"
-set -ogq @thm_sky "#{{ palette.sky.hex | lower }}"
-set -ogq @thm_sapphire "#{{ palette.sapphire.hex | lower }}"
-set -ogq @thm_blue "#{{ palette.blue.hex | lower }}"
-set -ogq @thm_lavender "#{{ palette.lavender.hex | lower }}"
+set -ogq @thm_light_blue "#{{ palette.sky.hex | lower }}"
+set -ogq @thm_light_blue "#{{ palette.sapphire.hex | lower }}"
+set -ogq @thm_dark_blue "#{{ palette.blue.hex | lower }}"
+set -ogq @thm_light_purple "#{{ palette.lavender.hex | lower }}"
 
 # Surfaces and overlays
 set -ogq @thm_subtext_1 "#{{ palette.subtext0.hex | lower }}"

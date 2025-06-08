@@ -16,7 +16,7 @@ Using your favourite editor, edit the file `~/.tmux.conf`.
 It should look like this:
 
 ```bash
-set -g @catppuccin_flavor 'mocha'
+set -g @kanagawa_flavor 'wave'
 
 run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
 ```
@@ -33,13 +33,13 @@ be a bit more colorful. Edit your tmux config again so it looks like this.
 
 ```bash
 # Pick a softer palette.
-set -g @catppuccin_flavor 'frappe'
+set -g @kanagawa_flavor 'dragon'
 
 run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
 
 # Make the status line more pleasant.
 set -g status-left ""
-set -g status-right '#[fg=#{@thm_crust},bg=#{@thm_teal}] session: #S '
+set -g status-right '#[fg=#{@thm_fg_dark},bg=#{@thm_teal}] session: #S '
 
 # Ensure that everything on the right side of the status line
 # is included.
@@ -59,7 +59,7 @@ in the man page, but the tl;dr is that they control what appears on the left
 and right of the status line.
 
 The `#[]` syntax is an embedded style, similar to inline css.
-`fg=#{@thm_crust}` says "make the text the crust color". `@thm_crust` is a
+`fg=#{@thm_fg_dark}` says "make the text the crust color". `@thm_fg_dark` is a
 user option set by the plugin. It is created by the line
 `run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux`, so if you try
 and use colors before that line, it won't work. The `#S` is a special sequence
