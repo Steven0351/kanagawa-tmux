@@ -1,3 +1,5 @@
 custom
+*.bk
+.lazy.lua
 !custom/README.md
 !custom/example.sh
