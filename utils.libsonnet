@@ -6,6 +6,13 @@
 
       for k in std.objectFields(obj)
     ]),
+  manifestConf(obj)::
+    std.join('\n', [
+      local value = obj[k];
+      '%s %s' % [k, value]
+
+      for k in std.objectFields(obj)
+    ]),
   Theme: {
     white: error 'Must override',
     dark_purple: error 'Must override',
